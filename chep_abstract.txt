@@ -1,0 +1,28 @@
+* website: http://chep2015.kek.jp/
+* abstract 1000 words max
+
+Lobster - An Opportunistic Computing Framework
+==============================================
+
+Analyses within CMS require extensive use of computing resources to produce
+results.  Most of these computing resources are found at dedicated CMS
+computing facilities, which users connect to or use via grid submission.
+Since these resources are shared, the progress of any analysis depends
+highly on the overall analysis activity at CMS.
+A part of these facilities are at universities, where the IT department
+will often outfit a part of their available machines with CMS a specific
+software setup, to be primarily used by the local CMS group.  This allows
+for a highly responsive analysis workflow, that is limited by the number of
+CPUs available.
+
+At the University of Notre Dame, additional resources on currently idle
+machines owned by other working groups are provided for general usage, but
+any running jobs can be terminated at the owners will.
+In cooperation with the local Cooperative Computing Lab,
+we have developed an opportunistic workflow management tool, Lobster,
+to harvest these idle CPUs while mitigating the effects of job eviction.
+A client-server design based on work_queue is used to run user analyses,
+where the CMS specific software environment for the jobs is provided via
+CVMFS in a parrot sandbox.  Data access is performed through chirp for local
+data and xrootd for CMS data.  We will evaluate the design and performance
+of our approach using our workgroup's analysis workflow.
